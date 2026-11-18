@@ -16,6 +16,7 @@ def rotate_even(l, k):
 
     return l
 
+
 l=list(map(int, input("Enter list separated by space").split()))
 #split separates the string wherever there is space
 #map(int, ...) converts each string into an integer
@@ -27,19 +28,11 @@ print(result)
 '''
 Extract elements at even indices.
 
-
-
 Calculate the effective rotation using modulo.
-
-
 
 Rotate those extracted elements.
 
-
-
 Put them back into the original even-indexed positions.
-
-
 
 Return the original list with its updated values.
 '''
