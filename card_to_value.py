@@ -50,7 +50,7 @@ def card_to_value_tuple(card):
     # Get suit value
     suit_value = suits[suit]
 
-        # Get rank value
+    # Get rank value
     if rank in ranks:
         rank_value = ranks[rank]
     else:
@@ -63,4 +63,36 @@ print(card_to_value_tuple("10D"))
 print(card_to_value_tuple("QH"))
 print(card_to_value_tuple("AS"))
 print(card_to_value_tuple("7C"))
+
+
+
+    #DIFFERENT APPROACH
     
+def card_to_value_tuple(card):
+
+    suit = card[-1]
+    rank = card[:-1]
+
+    # Determine suit value
+    if suit == "S":
+        suit_value = 1
+    elif suit == "H":
+        suit_value = 2
+    elif suit == "D":
+        suit_value = 3
+    elif suit == "C":
+        suit_value = 4
+
+    # Determine rank value
+    if rank == "A":
+        rank_value = 1
+    elif rank == "J":
+        rank_value = 11
+    elif rank == "Q":
+        rank_value = 12
+    elif rank == "K":
+        rank_value = 13
+    else:
+        rank_value = int(rank)
+
+    return (suit_value, rank_value)
