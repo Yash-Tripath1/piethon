@@ -33,7 +33,7 @@ Important: The rank can have variable length. For example, A has one character, 
 
 def card_to_value_tuple(card):
     suit=card[-1]
-    rank=[:-1]
+    rank=card[:-1]
 
     suits={
         "S": 1,
