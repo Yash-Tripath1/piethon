@@ -47,3 +47,40 @@ print(is_odd_length_palindrome("mom"))
 
 def is_odd_length_palindrome(s):
     return s[::-1] == s and len(s) % 2 != 0     #even smaller approach
+
+
+'''
+Write a function:
+def remove_elements_at_two_indices(l, i1, i2):
+
+
+
+It takes:
+- l: A list.
+- i1: First index.
+- i2: Second index.
+The function should remove the elements at both indices from the original list.
+
+Important conditions:
+- Both indices are non-negative.
+- The indices are unique (they are different).
+- You must modify the original list (in-place).
+- The function should not return anything.
+Example
+l = [1, 2, 3, 4, 5, 6, 7]i1 = 5i2 = 1remove_elements_at_two_indices(l, i1, i2)print(l)
+
+
+
+Expected output:
+[1, 3, 4, 5, 7]
+'''
+def remove_elements_at_two_indices(l,l1,l2):
+    if l1>l2:
+        l.pop(l1)
+        l.pop(l2)
+    else:
+        l.pop(l2)
+        l.pop(l1)
+
+    return l
+print(remove_elements_at_two_indices([1,2,3,4,5,6], 2, 5))
