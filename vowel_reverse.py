@@ -72,7 +72,12 @@ def reverse_vowels(s):
     return "".join(s)
 
 
-print(reverse_vowels("Hello World"))
+# Calling part
+n = int(input())
+
+for _ in range(n):  #dummy variable
+    s = input()
+    print(reverse_vowels(s))
 
 
 
