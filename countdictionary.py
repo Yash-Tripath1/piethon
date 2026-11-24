@@ -22,3 +22,16 @@ def count_items(items):
     return d
 
 print(count_items([    "apple", "banana", "apple",    "orange", "banana", "apple",    "mango", "orange"]))
+
+#____________________________________________________________________________________________________________
+
+def count_items(items):
+    d = {}
+
+    for item in items:
+        if item in d:
+            d[item] += 1
+        else:
+            d[item] = 1
+
+    return d
